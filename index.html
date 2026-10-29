@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Junction CSC | Machagora</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#17233b}
+header{background:#123b70;color:white;padding:24px 16px;text-align:center}
+header h1{margin:0 0 8px;font-size:28px}
+header p{margin:0}
+nav{background:#09274c;padding:13px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
+.hero{padding:38px 18px;text-align:center;background:#e1edff}
+.hero h2{font-size:27px;margin:0 0 12px}
+.hero p{line-height:1.7}
+.btn{display:inline-block;background:#087b48;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;margin:8px 4px}
+section{padding:25px 16px;max-width:1000px;margin:auto}
+h2{text-align:center}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 3px 12px #00000010}
+.card h3{color:#123b70;margin-top:0}
+form{background:white;padding:20px;border-radius:12px;max-width:550px;margin:auto}
+input,select,textarea{width:100%;padding:12px;margin:8px 0 14px;border:1px solid #ccd5e2;border-radius:7px;font-size:16px}
+button{background:#123b70;color:white;border:0;padding:13px 18px;border-radius:7px;font-size:16px;cursor:pointer;width:100%}
+footer{background:#09274c;color:white;text-align:center;padding:22px;line-height:1.8}
+</style>
+</head>
+<body>
+<header>
+<h1>Online Junction CSC</h1>
+<p>आपकी सभी ऑनलाइन सेवाएँ, एक ही जगह</p>
+<p>माचागोरा | शिव मंदिर के सामने</p>
+</header>
+
+<nav>
+<a href="#home">होम</a>
+<a href="#services">सेवाएँ</a>
+<a href="#request">आवेदन करें</a>
+<a href="#contact">संपर्क</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>आपका अपना डिजिटल सेवा केंद्र</h2>
+<p>ऑनलाइन फॉर्म, सरकारी सेवाएँ एवं अन्य डिजिटल सुविधाओं के लिए संपर्क करें।</p>
+<a class="btn" href="#services">सेवाएँ देखें</a>
+<a class="btn" href="https://wa.me/918799423553">WhatsApp करें</a>
+</div>
+
+<section id="services">
+<h2>हमारी सेवाएँ</h2>
+<div class="services">
+<div class="card">
+<h3>📝 ऑनलाइन फॉर्म</h3>
+<p>विभिन्न भर्ती एवं सरकारी योजनाओं के फॉर्म भरने में सहायता।</p>
+</div>
+<div class="card">
+<h3>📄 दस्तावेज सेवाएँ</h3>
+<p>उपलब्ध दस्तावेजों एवं प्रमाण पत्र संबंधी सेवाओं के लिए संपर्क करें।</p>
+</div>
+<div class="card">
+<h3>🏦 बैंकिंग सेवाएँ</h3>
+<p>उपलब्ध बैंकिंग सुविधाओं एवं खाते संबंधी जानकारी के लिए संपर्क करें।</p>
+</div>
+<div class="card">
+<h3>🖨️ प्रिंट एवं फोटो</h3>
+<p>प्रिंटिंग, फोटो और दस्तावेज संबंधी कार्य।</p>
+</div>
+</div>
+</section>
+
+<section id="request">
+<h2>सेवा के लिए पूछताछ करें</h2>
+<form onsubmit="sendRequest(event)">
+<label>आपका नाम</label>
+<input id="name" required placeholder="अपना नाम लिखें">
+<label>मोबाइल नंबर</label>
+<input id="phone" required inputmode="numeric" pattern="[0-9]{10}" placeholder="10 अंकों का नंबर">
+<label>कौन-सी सेवा चाहिए?</label>
+<select id="service">
+<option>ऑनलाइन फॉर्म</option>
+<option>दस्तावेज संबंधी सेवा</option>
+<option>बैंकिंग सेवा</option>
+<option>प्रिंट एवं फोटो</option>
+<option>अन्य सेवा</option>
+</select>
+<label>अतिरिक्त जानकारी</label>
+<textarea id="details" rows="3" placeholder="यहाँ जानकारी लिखें"></textarea>
+<button type="submit">WhatsApp पर आवेदन भेजें</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>हमसे संपर्क करें</h2>
+<div class="card" style="text-align:center">
+<p><strong>Online Junction CSC</strong></p>
+<p>शिव मंदिर के सामने, माचागोरा</p>
+<p>WhatsApp: 8799423553</p>
+<a class="btn" href="https://wa.me/918799423553">अभी संपर्क करें</a>
+</div>
+</section>
+
+<footer>
+<p>© Online Junction CSC, Machagora</p>
+<p>डिजिटल सेवाएँ — सरल, सुविधाजनक और भरोसेमंद</p>
+</footer>
+
+<script>
+function sendRequest(e){
+e.preventDefault();
+const n=document.getElementById('name').value;
+const p=document.getElementById('phone').value;
+const s=document.getElementById('service').value;
+const d=document.getElementById('details').value;
+const msg=`Online Junction CSC पूछताछ\nनाम: ${n}\nमोबाइल: ${p}\nसेवा: ${s}\nजानकारी: ${d}`;
+window.open('https://wa.me/918799423553?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+</html>
